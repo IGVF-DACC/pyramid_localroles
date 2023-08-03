@@ -17,7 +17,7 @@ requires = [
 
 setup(
     name='pyramid_localroles',
-    version='0.1',
+    version='2.0.0',
     description='Local roles authorization policy for Pyramid',
     long_description=README + '\n\n' + CHANGES,
     packages=find_packages(),
