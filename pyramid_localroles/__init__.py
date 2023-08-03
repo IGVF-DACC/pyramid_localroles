@@ -1,8 +1,13 @@
 from zope.interface import implementer
 from pyramid.authorization import ACLAuthorizationPolicy
-from pyramid.compat import is_nonstr_iter
 from pyramid.interfaces import IAuthorizationPolicy
 from pyramid.location import lineage
+
+
+def is_nonstr_iter(v):
+    if isinstance(v, str):
+        return False
+    return hasattr(v, '__iter__')
 
 
 def local_principals(context, principals):
